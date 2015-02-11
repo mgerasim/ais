@@ -1,0 +1,8 @@
+###############################################################################
+## Monit конфигурационный файл
+## Для мониторинга приложения обзвонки
+###############################################################################
+check process ais_autocall with pidfile /var/run/ais_autocall.pid
+    group system
+    start program = "/etc/init.d/ais_autocall start"
+    stop program = "/etc/init.d/ais_autocall stop"
